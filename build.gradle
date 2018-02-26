@@ -1,0 +1,22 @@
+group 'com.lanou'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven{url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    mavenCentral()
+    jcenter();
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile 'com.cv4j.netdiscovery:netdiscovery-core:0.0.10'
+    compile 'com.cv4j.netdiscovery:netdiscovery-extra:0.0.10'
+
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.11.2'
+}
